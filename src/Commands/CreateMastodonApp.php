@@ -18,7 +18,7 @@ class CreateMastodonApp extends Command
 
         $serviceName = "mastodon.$server";
 
-        if (Services::query()->get($serviceName)) {
+        if (Services::get_data($serviceName)) {
             if (!$this->confirm('Are you sure you want to create a new application for this server?')) {
                 return self::FAILURE;
             }

@@ -42,9 +42,9 @@ class Settings
         Cache::put($this->resolveCacheKey($name), $default);
     }
 
-    public function get(string $name)
+    public function get_data(string $name)
     {
-        return $this->getFromCache($name, function () use ($name) {
+        return $this->getFromCache_data($name, function () use ($name) {
             $dbRecord = Setting::where('name', $name)->first();
 
             $defaultPayload = $dbRecord ? $dbRecord->payload : $this->form()[$name];
@@ -58,11 +58,11 @@ class Settings
     public function all(): array
     {
         return Arr::map($this->form(), function ($payload, $name) {
-            return $this->get($name);
+            return $this->get_data($name);
         });
     }
 
-    public function getFromCache(string $name, mixed $default = null)
+    public function getFromCache_data(string $name, mixed $default = null)
     {
         return Cache::get($this->resolveCacheKey($name), $default);
     }

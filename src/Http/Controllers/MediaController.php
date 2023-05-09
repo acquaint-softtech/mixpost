@@ -15,8 +15,8 @@ class MediaController extends Controller
     {
         return Inertia::render('Media', [
             'has_service' => [
-                'unsplash' => !!Services::query()->get('unsplash', 'client_id'),
-                'tenor' => !!Services::query()->get('tenor', 'client_id')
+                'unsplash' => !! Services::get_data('unsplash', 'client_id'),
+                'tenor' => !! Services::get_data('tenor', 'client_id')
             ]
         ]);
     }

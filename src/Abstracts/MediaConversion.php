@@ -15,7 +15,7 @@ abstract class MediaConversion implements MediaConversionContract
     protected string $toDisk = '';
     protected string $filepath;
 
-    public function __construct(string $name)
+    final public function __construct(string $name)
     {
         $this->setName($name);
     }

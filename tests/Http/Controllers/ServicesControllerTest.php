@@ -23,7 +23,7 @@ it('can update a service', function () {
     expect($model !== null)->toBeTrue()
         ->and($model->credentials->toArray())->toBeArray()
         ->and($model->credentials->toArray())->toEqual($credentials)
-        ->and(Services::getFromCache('twitter') !== null)->toBeTrue();
+        ->and(Services::getFromCache_data('twitter') !== null)->toBeTrue();
 });
 
 it('can show validation on update a service', function () {

@@ -8,7 +8,7 @@ class MediaConversionData
 {
     protected MediaConversion $conversion;
 
-    public function __construct(MediaConversion $conversion)
+   final public function __construct(MediaConversion $conversion)
     {
         $this->setConversion($conversion);
     }
