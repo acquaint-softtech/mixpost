@@ -1,5 +1,5 @@
 {
-    "name": "inovector/mixpost",
+    "name": "acquaint-softtech/mixpost",
     "description": "Self-hosted social media management software",
     "keywords": [
         "inovector",
@@ -8,13 +8,12 @@
         "scheduling",
         "laravel"
     ],
-    "homepage": "https://github.com/inovector/mixpost",
+    "homepage": "ttps://github.com/acquaint-softtech/mixpost.git",
     "license": "MIT",
     "authors": [
         {
-            "name": "Dima Botezatu",
-            "email": "dima@inovector.com",
-            "role": "Developer"
+            "name": "Acquaint",
+            "email": "alpesh@acquaintsoft.com"
         }
     ],
     "require": {
