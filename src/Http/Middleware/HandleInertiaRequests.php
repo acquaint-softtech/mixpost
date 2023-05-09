@@ -59,9 +59,9 @@ class HandleInertiaRequests extends Middleware
             'mixpost' => [
                 'mime_types' => config('mixpost.mime_types'),
                 'settings' => [
-                    'timezone' => Settings::query()->get('timezone'),
-                    'time_format' => Settings::query()->get('time_format'),
-                    'week_starts_on' => Settings::query()->get('week_starts_on'),
+                    'timezone' => Settings::get_data('timezone'),
+                    'time_format' => Settings::get_data('time_format'),
+                    'week_starts_on' => Settings::get_data('week_starts_on'),
                 ]
             ]
         ]);

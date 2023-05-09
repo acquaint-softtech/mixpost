@@ -45,13 +45,13 @@ if (!function_exists('removeHtmlTags')) {
 if (!function_exists('convertTimeToUTC')) {
     function convertTimeToUTC(string|DateTimeInterface|null $time = null, DateTimeZone|string|null $tz = null): Carbon
     {
-        return Carbon::parse($time, $tz ?: Settings::query()->get('timezone'))->timezone('UTC');
+        return Carbon::parse($time, $tz ?: Settings::get_data('timezone'))->timezone('UTC');
     }
 }
 
 if (!function_exists('timeFormat')) {
     function timeFormat(): string
     {
-        return Settings::query()->get('time_format') == 24 ? 'H:i' : 'h:ia';
+        return Settings::get_data('time_format') == 24 ? 'H:i' : 'h:ia';
     }
 }
