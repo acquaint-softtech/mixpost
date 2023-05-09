@@ -33,6 +33,7 @@ if (!function_exists('mixpostAssets')) {
     }
 }
 
+
 if (!function_exists('removeHtmlTags')) {
     function removeHtmlTags($string): string
     {

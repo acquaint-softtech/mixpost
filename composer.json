@@ -30,6 +30,7 @@
     },
     "require-dev": {
         "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0",
         "orchestra/testbench": "^7.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-faker": "^1.0",
