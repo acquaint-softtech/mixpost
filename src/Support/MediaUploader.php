@@ -15,7 +15,7 @@ class MediaUploader
     protected string $path = '';
     protected array $conversions;
 
-    public function __construct(UploadedFile $file)
+    final public function __construct(UploadedFile $file)
     {
         $this->setFile($file);
         $this->disk(config('mixpost.disk'));

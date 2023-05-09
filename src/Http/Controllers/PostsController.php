@@ -51,7 +51,7 @@ class PostsController extends Controller
     public function create(Request $request): Response
     {
         return Inertia::render('Posts/CreateEdit', [
-            'default_accounts' => Settings::query()->get('default_accounts'),
+            'default_accounts' => Settings::get_data('default_accounts'),
             'accounts' => AccountResource::collection(Account::oldest()->get())->resolve(),
             'tags' => TagResource::collection(Tag::latest()->get())->resolve(),
             'post' => null,
@@ -60,8 +60,8 @@ class PostsController extends Controller
                 'time' => Str::after($request->route('schedule_at'), ' '),
             ],
             'has_service' => [
-                'unsplash' => !!Services::query()->get('unsplash', 'client_id'),
-                'tenor' => !!Services::query()->get('tenor', 'client_id')
+                'unsplash' => !! Services::get_data('unsplash', 'client_id'),
+                'tenor' => !! Services::get_data('tenor', 'client_id')
             ]
         ]);
     }
@@ -82,8 +82,8 @@ class PostsController extends Controller
             'tags' => TagResource::collection(Tag::latest()->get())->resolve(),
             'post' => new PostResource($post),
             'has_service' => [
-                'unsplash' => !!Services::query()->get('unsplash', 'client_id'),
-                'tenor' => !!Services::query()->get('tenor', 'client_id')
+                'unsplash' => !! Services::get_data('unsplash', 'client_id'),
+                'tenor' => !! Services::get_data('tenor', 'client_id')
             ]
         ]);
     }

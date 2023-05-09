@@ -17,7 +17,7 @@ class MediaFetchGifsController extends Controller
 {
     public function __invoke(Request $request): AnonymousResourceCollection
     {
-        $clientId = Services::query()->get('tenor', 'client_id');
+        $clientId =  Services::get_data('tenor', 'client_id');
 
         if (!$clientId) {
             abort(Response::HTTP_FORBIDDEN);

@@ -58,7 +58,7 @@ class Services
         Cache::put($this->resolveCacheKey($name), Crypt::encryptString(json_encode($value)));
     }
 
-    public function get(string $name, null|string $credentialKey = null)
+    public function get_data(string $name, null|string $credentialKey = null)
     {
         $defaultPayload = Arr::get($this->form(), $name, []);
 
@@ -98,7 +98,7 @@ class Services
     public function all(): array
     {
         return Arr::map($this->form(), function ($payload, $name) {
-            return $this->get($name);
+            return $this->get_data($name);
         });
     }
 

@@ -13,7 +13,7 @@ class SocialProviderManager extends SocialProviderManagerAbstract
 {
     protected function connectTwitterProvider()
     {
-        $config = Services::query()->get('twitter');
+        $config = Services::get_data('twitter');
 
         $config['redirect'] = route('mixpost.callbackSocialProvider', ['provider' => 'twitter']);
 
@@ -22,7 +22,7 @@ class SocialProviderManager extends SocialProviderManagerAbstract
 
     protected function connectFacebookPageProvider()
     {
-        $config = Services::query()->get('facebook');
+        $config = Services::get_data('facebook');
 
         $config['redirect'] = route('mixpost.callbackSocialProvider', ['provider' => 'facebook_page']);
 
@@ -31,7 +31,7 @@ class SocialProviderManager extends SocialProviderManagerAbstract
 
     protected function connectFacebookGroupProvider()
     {
-        $config = Services::query()->get('facebook');
+        $config = Services::get_data('facebook');
 
         $config['redirect'] = route('mixpost.callbackSocialProvider', ['provider' => 'facebook_group']);
 
@@ -52,7 +52,7 @@ class SocialProviderManager extends SocialProviderManagerAbstract
             $serverName = $this->values['data']['server']; // Get the server value that have been set on SocialProviderManager::connect($provider, array $values = [])
         }
 
-        $config = Services::query()->get("mastodon.$serverName");
+        $config = Services::get_data("mastodon.$serverName");
 
         $config['redirect'] = route('mixpost.callbackSocialProvider', ['provider' => 'mastodon']);
         $config['values'] = [

@@ -21,7 +21,7 @@ class CreateMastodonApp extends FormRequest
     {
         $serviceName = "mastodon.{$this->input('server')}";
 
-        if (Services::query()->get($serviceName)) {
+        if ( Services::get_data($serviceName)) {
             return;
         }
 
