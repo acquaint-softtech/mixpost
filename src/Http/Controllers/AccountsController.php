@@ -21,8 +21,8 @@ class AccountsController extends Controller
         return Inertia::render('Accounts/Accounts', [
             'accounts' => AccountResource::collection(Account::latest()->get())->resolve(),
             'has_service' => [
-                'twitter' => !!Services::get('twitter', 'client_id'),
-                'facebook' => !!Services::get('facebook', 'client_id')
+                'twitter' => !!Services::query()->get('twitter', 'client_id'),
+                'facebook' => !!Services::query()->get('facebook', 'client_id')
             ]
         ]);
     }

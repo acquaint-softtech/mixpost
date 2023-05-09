@@ -13,7 +13,7 @@ class SchedulePostController extends Controller
     {
         $schedulePost->handle();
 
-        $scheduledAt = $schedulePost->getDateTime()->tz(Settings::get('timezone'))->format("D, M j, " . timeFormat());
+        $scheduledAt = $schedulePost->getDateTime()->tz(Settings::query()->get('timezone'))->format("D, M j, " . timeFormat());
 
         return response()->json("The post has been scheduled.\n$scheduledAt");
     }

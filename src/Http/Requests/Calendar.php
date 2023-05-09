@@ -31,7 +31,7 @@ class Calendar extends FormRequest
 
     public function today(): string
     {
-        return now()->tz(Settings::get('timezone'))->toDateString();
+        return now()->tz(Settings::query()->get('timezone'))->toDateString();
     }
 
     public function type(): string
@@ -42,6 +42,6 @@ class Calendar extends FormRequest
             return $type;
         }
 
-        return Settings::getFromCache('calendar_type', 'month');
+        return Settings::query()->getFromCache('calendar_type', 'month');
     }
 }

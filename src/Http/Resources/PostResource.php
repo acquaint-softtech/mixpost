@@ -19,12 +19,12 @@ class PostResource extends JsonResource
             'versions' => PostVersionResource::collection($this->whenLoaded('versions')),
             'tags' => TagResource::collection($this->whenLoaded('tags')),
             'scheduled_at' => [
-                'date' => $this->scheduled_at?->tz(Settings::get('timezone'))->toDateString(),
-                'time' => $this->scheduled_at?->tz(Settings::get('timezone'))->format('H:i'),
-                'human' => $this->scheduled_at?->tz(Settings::get('timezone'))->format("D, M j, " . timeFormat())
+                'date' => $this->scheduled_at?->tz(Settings::query()->get('timezone'))->toDateString(),
+                'time' => $this->scheduled_at?->tz(Settings::query()->get('timezone'))->format('H:i'),
+                'human' => $this->scheduled_at?->tz(Settings::query()->get('timezone'))->format("D, M j, " . timeFormat())
             ],
             'published_at' => [
-                'human' => $this->published_at?->tz(Settings::get('timezone'))->format("D, M j, " . timeFormat())
+                'human' => $this->published_at?->tz(Settings::query()->get('timezone'))->format("D, M j, " . timeFormat())
             ]
         ];
     }
