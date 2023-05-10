@@ -45,7 +45,7 @@ class Settings
     public function get_data(string $name)
     {
         return $this->getFromCache_data($name, function () use ($name) {
-            $dbRecord = Setting::where('name', $name)->first();
+            $dbRecord = Setting::query()->where('name', $name)->first();
 
             $defaultPayload = $dbRecord ? $dbRecord->payload : $this->form()[$name];
 

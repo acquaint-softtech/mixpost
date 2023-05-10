@@ -30,7 +30,7 @@ class AccountEntitiesController extends Controller
 
         $provider->setAccessToken($accessToken);
 
-        $existingAccounts = Account::select('provider', 'provider_id')->get();
+        $existingAccounts = Account::query()->select('provider', 'provider_id')->get();
 
         $accounts = array_values(Arr::where($provider->getEntities(), function ($account) use ($providerName, $existingAccounts) {
             return !$existingAccounts->where('provider', $providerName)->where('provider_id', $account['id'])->first();

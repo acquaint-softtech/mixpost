@@ -28,7 +28,7 @@ class ProcessMastodonMetricsJob implements ShouldQueue
 
     public function handle()
     {
-        $items = ImportedPost::select('created_at',
+        $items = ImportedPost::query()->select('created_at',
             DB::raw('SUM(JSON_EXTRACT(metrics, "$.replies")) as replies'),
             DB::raw('SUM(JSON_EXTRACT(metrics, "$.reblogs")) as reblogs'),
             DB::raw('SUM(JSON_EXTRACT(metrics, "$.favourites")) as favourites'))
@@ -48,6 +48,6 @@ class ProcessMastodonMetricsJob implements ShouldQueue
             ];
         });
 
-        Metric::upsert($data->toArray(), ['data'], ['account_id', 'date']);
+        Metric::query()->upsert($data->toArray(), ['data'], ['account_id', 'date']);
     }
 }

@@ -21,7 +21,7 @@ class UpdateTag extends FormRequest
 
     public function handle(): int
     {
-        $record = Tag::where('id', $this->route('tag'))->firstOrFail();
+        $record = Tag::query()->where('id', $this->route('tag'))->firstOrFail();
 
         if ($this->input('action') === 'name') {
             return $record->update($this->only('name'));

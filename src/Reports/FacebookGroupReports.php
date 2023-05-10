@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Inovector\Mixpost\Contracts\ProviderReports;
 use Inovector\Mixpost\Models\Account;
 use Inovector\Mixpost\Models\Audience;
+use Inovector\Mixpost\Models\Metric;
 
 class FacebookGroupReports implements ProviderReports
 {
@@ -22,13 +23,13 @@ class FacebookGroupReports implements ProviderReports
 
     protected function metrics(Account $account, string $period): array
     {
-//        $report = Metric::account($account->id)->select(
-//            DB::raw('SUM(JSON_EXTRACT(data, "$.likes")) as likes'),
-//            DB::raw('SUM(JSON_EXTRACT(data, "$.retweets")) as retweets'),
-//            DB::raw('SUM(JSON_EXTRACT(data, "$.impressions")) as impressions')
-//        )->when($period, function (Builder $query) use ($period) {
-//            return $this->queryPeriod($query, $period);
-//        })->first();
+       $report = Metric::query()->account($account->id)->select(
+           DB::raw('SUM(JSON_EXTRACT(data, "$.likes")) as likes'),
+           DB::raw('SUM(JSON_EXTRACT(data, "$.retweets")) as retweets'),
+           DB::raw('SUM(JSON_EXTRACT(data, "$.impressions")) as impressions')
+       )->when($period, function (Builder $query) use ($period) {
+           return $this->queryPeriod($query, $period);
+       })->first();
 
         return [
             'likes' => $report->likes ?? 0,
@@ -39,7 +40,7 @@ class FacebookGroupReports implements ProviderReports
 
     protected function audience(Account $account, string $period): array
     {
-        $report = Audience::account($account->id)
+        $report = Audience::query()->account($account->id)
             ->select('date', DB::raw('SUM(total) as total'))
             ->groupBy('date')
             ->when($period, function (Builder $query) use ($period) {

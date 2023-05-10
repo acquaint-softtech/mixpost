@@ -13,7 +13,7 @@ class DuplicatePostController extends Controller
     public function __invoke(Post $post): RedirectResponse
     {
         DB::transaction(function () use ($post) {
-            $newPost = Post::create([
+            $newPost = Post::query()->create([
                 'status' => PostStatus::DRAFT
             ]);
 

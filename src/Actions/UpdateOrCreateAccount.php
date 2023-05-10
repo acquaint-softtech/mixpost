@@ -11,7 +11,7 @@ class UpdateOrCreateAccount
 {
     public function __invoke(string $providerName, array $account, array $accessToken): void
     {
-        Account::updateOrCreate(
+        Account::query()->updateOrCreate(
             [
                 'provider' => $providerName,
                 'provider_id' => $account['id']

@@ -11,7 +11,7 @@ class StorePost extends PostFormRequest
     public function handle()
     {
         return DB::transaction(function () {
-            $record = Post::create([
+            $record = Post::query()->create([
                 'status' => PostStatus::DRAFT,
                 'scheduled_at' => $this->scheduledAt() ? convertTimeToUTC($this->scheduledAt()) : null
             ]);

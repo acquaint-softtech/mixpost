@@ -54,7 +54,7 @@ class ImportFacebookInsightsJob implements ShouldQueue
             ];
         });
 
-        FacebookInsight::upsert($data, ['account_id', 'type', 'date'], ['value']);
+        FacebookInsight::query()->upsert($data, ['account_id', 'type', 'date'], ['value']);
     }
 
     protected function getInsights()

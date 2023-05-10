@@ -8,7 +8,7 @@ class UpdateOrCreateService
 {
     public function __invoke(string $name, array $value): Service
     {
-        return Service::updateOrCreate(['name' => $name], [
+        return Service::query()->updateOrCreate(['name' => $name], [
             'credentials' => $value
         ]);
     }

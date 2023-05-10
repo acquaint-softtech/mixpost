@@ -31,8 +31,8 @@ class PostsController extends Controller
         $posts = PostQuery::apply($request)->latest('id')->paginate(20)->onEachSide(1)->withQueryString();
 
         return Inertia::render('Posts/Index', [
-            'accounts' => fn() => AccountResource::collection(Account::oldest()->get())->resolve(),
-            'tags' => fn() => TagResource::collection(Tag::latest()->get())->resolve(),
+            'accounts' => fn() => AccountResource::collection(Account::query()->oldest()->get())->resolve(),
+            'tags' => fn() => TagResource::collection(Tag::query()->latest()->get())->resolve(),
             'filter' => [
                 'keyword' => $request->query('keyword', ''),
                 'status' => $request->query('status'),
@@ -44,7 +44,7 @@ class PostsController extends Controller
                     'accounts' => Arr::map($request->query('accounts', []), 'intval')
                 ]
             ]),
-            'has_failed_posts' => Post::failed()->exists()
+            'has_failed_posts' => Post::query()->failed()->exists()
         ]);
     }
 
@@ -52,8 +52,8 @@ class PostsController extends Controller
     {
         return Inertia::render('Posts/CreateEdit', [
             'default_accounts' => Settings::get_data('default_accounts'),
-            'accounts' => AccountResource::collection(Account::oldest()->get())->resolve(),
-            'tags' => TagResource::collection(Tag::latest()->get())->resolve(),
+            'accounts' => AccountResource::collection(Account::query()->oldest()->get())->resolve(),
+            'tags' => TagResource::collection(Tag::query()->latest()->get())->resolve(),
             'post' => null,
             'schedule_at' => [
                 'date' => Str::before($request->route('schedule_at'), ' '),
@@ -78,8 +78,8 @@ class PostsController extends Controller
         $post->load('accounts', 'versions', 'tags');
 
         return Inertia::render('Posts/CreateEdit', [
-            'accounts' => AccountResource::collection(Account::oldest()->get())->resolve(),
-            'tags' => TagResource::collection(Tag::latest()->get())->resolve(),
+            'accounts' => AccountResource::collection(Account::query()->oldest()->get())->resolve(),
+            'tags' => TagResource::collection(Tag::query()->latest()->get())->resolve(),
             'post' => new PostResource($post),
             'has_service' => [
                 'unsplash' => !! Services::get_data('unsplash', 'client_id'),
@@ -97,7 +97,7 @@ class PostsController extends Controller
 
     public function destroy(Request $request, RedirectAfterDeletedPost $redirectAfterPostDeleted, $id): RedirectResponse
     {
-        Post::where('id', $id)->delete();
+        Post::query()->where('id', $id)->delete();
 
         return $redirectAfterPostDeleted($request);
     }

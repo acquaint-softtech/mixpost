@@ -96,7 +96,7 @@ class AccountPublishPost
     {
         $items = [];
 
-        $media = Media::whereIn('id', $ids)->get()->keyBy('id');
+        $media = Media::query()->whereIn('id', $ids)->get()->keyBy('id');
 
         foreach ($ids as $id) {
             $item = $media[$id] ?? null;

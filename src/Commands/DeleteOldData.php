@@ -15,8 +15,8 @@ class DeleteOldData extends Command
 
     public function handle(): int
     {
-        ImportedPost::where('created_at', '<', Carbon::now()->subDays(95)->toDateString())->delete();
-        FacebookInsight::where('date', '<', Carbon::now()->subDays(95)->toDateString())->delete();
+        ImportedPost::query()->where('created_at', '<', Carbon::now()->subDays(95)->toDateString())->delete();
+        FacebookInsight::query()->where('date', '<', Carbon::now()->subDays(95)->toDateString())->delete();
 
         return self::SUCCESS;
     }
