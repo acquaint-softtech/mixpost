@@ -1,0 +1,518 @@
+{
+  "resources/fonts/Inter-Regular.ttf": {
+    "file": "assets/Inter-Regular.41ab0f70.ttf",
+    "src": "resources/fonts/Inter-Regular.ttf"
+  },
+  "resources/fonts/Inter-Medium.ttf": {
+    "file": "assets/Inter-Medium.10d48331.ttf",
+    "src": "resources/fonts/Inter-Medium.ttf"
+  },
+  "resources/fonts/Inter-SemiBold.ttf": {
+    "file": "assets/Inter-SemiBold.e8cbc2b8.ttf",
+    "src": "resources/fonts/Inter-SemiBold.ttf"
+  },
+  "resources/fonts/Inter-Bold.ttf": {
+    "file": "assets/Inter-Bold.790c108b.ttf",
+    "src": "resources/fonts/Inter-Bold.ttf"
+  },
+  "resources/img/calendar-disabled-item.svg": {
+    "file": "assets/calendar-disabled-item.e7fcf298.svg",
+    "src": "resources/img/calendar-disabled-item.svg"
+  },
+  "resources/img/fb-like.svg": {
+    "file": "assets/fb-like.59c2ede2.svg",
+    "src": "resources/img/fb-like.svg"
+  },
+  "resources/img/fb-wow.svg": {
+    "file": "assets/fb-wow.ca50712c.svg",
+    "src": "resources/img/fb-wow.svg"
+  },
+  "resources/img/fb-icons.png": {
+    "file": "assets/fb-icons.855a0fcf.png",
+    "src": "resources/img/fb-icons.png"
+  },
+  "resources/img/social-icons/mastodon/globe.svg": {
+    "file": "assets/globe.4f41e2b3.svg",
+    "src": "resources/img/social-icons/mastodon/globe.svg"
+  },
+  "resources/img/social-icons/mastodon/reply.svg": {
+    "file": "assets/reply.69e79af6.svg",
+    "src": "resources/img/social-icons/mastodon/reply.svg"
+  },
+  "resources/img/social-icons/mastodon/retweet.svg": {
+    "file": "assets/retweet.0437347b.svg",
+    "src": "resources/img/social-icons/mastodon/retweet.svg"
+  },
+  "resources/img/social-icons/mastodon/star.svg": {
+    "file": "assets/star.abade377.svg",
+    "src": "resources/img/social-icons/mastodon/star.svg"
+  },
+  "resources/img/social-icons/mastodon/bookmark.svg": {
+    "file": "assets/bookmark.331e5819.svg",
+    "src": "resources/img/social-icons/mastodon/bookmark.svg"
+  },
+  "resources/img/social-icons/mastodon/ellipsis.svg": {
+    "file": "assets/ellipsis.065dffec.svg",
+    "src": "resources/img/social-icons/mastodon/ellipsis.svg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app.40ac495f.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Accounts/AccountEntities.vue",
+      "resources/js/Pages/Accounts/Accounts.vue",
+      "resources/js/Pages/Calendar.vue",
+      "resources/js/Pages/Dashboard.vue",
+      "resources/js/Pages/Media.vue",
+      "resources/js/Pages/Posts/CreateEdit.vue",
+      "resources/js/Pages/Posts/Index.vue",
+      "_Services.3d38fe85.js",
+      "resources/js/Pages/Settings.vue"
+    ],
+    "css": [
+      "assets/app.2fb2114c.css"
+    ],
+    "assets": [
+      "assets/Inter-Regular.41ab0f70.ttf",
+      "assets/Inter-Medium.10d48331.ttf",
+      "assets/Inter-SemiBold.e8cbc2b8.ttf",
+      "assets/Inter-Bold.790c108b.ttf"
+    ]
+  },
+  "resources/js/Pages/Accounts/AccountEntities.vue": {
+    "file": "assets/AccountEntities.107f220f.js",
+    "src": "resources/js/Pages/Accounts/AccountEntities.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_PageHeader.e50e517c.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Checkbox.b40bc676.js"
+    ]
+  },
+  "_PageHeader.e50e517c.js": {
+    "file": "assets/PageHeader.e50e517c.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_PrimaryButton.d6cf04cb.js": {
+    "file": "assets/PrimaryButton.d6cf04cb.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_Checkbox.b40bc676.js": {
+    "file": "assets/Checkbox.b40bc676.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Accounts/Accounts.vue": {
+    "file": "assets/Accounts.4901ed20.js",
+    "src": "resources/js/Pages/Accounts/Accounts.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useNotifications.3e5afb48.js",
+      "_PageHeader.e50e517c.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Alert.a4238769.js",
+      "_Account.edb5e561.js",
+      "_Facebook.541833ba.js",
+      "_Input.4935a964.js",
+      "_HorizontalGroup.4e72606a.js",
+      "_ProviderIcon.29b548ce.js",
+      "_DropdownItem.1205de72.js",
+      "_EllipsisVertical.5b33e03a.js",
+      "_ExclamationCircle.fc6baa24.js"
+    ]
+  },
+  "_useNotifications.3e5afb48.js": {
+    "file": "assets/useNotifications.3e5afb48.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_Alert.a4238769.js": {
+    "file": "assets/Alert.a4238769.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_Account.edb5e561.js": {
+    "file": "assets/Account.edb5e561.js",
+    "imports": [
+      "_ProviderIcon.29b548ce.js",
+      "_ExclamationCircle.fc6baa24.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_DropdownItem.1205de72.js": {
+    "file": "assets/DropdownItem.1205de72.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "assets/DropdownItem.b54678c7.css"
+    ]
+  },
+  "_EllipsisVertical.5b33e03a.js": {
+    "file": "assets/EllipsisVertical.5b33e03a.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_ProviderIcon.29b548ce.js": {
+    "file": "assets/ProviderIcon.29b548ce.js",
+    "imports": [
+      "resources/js/app.js",
+      "_Facebook.541833ba.js"
+    ]
+  },
+  "_ExclamationCircle.fc6baa24.js": {
+    "file": "assets/ExclamationCircle.fc6baa24.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_Facebook.541833ba.js": {
+    "file": "assets/Facebook.541833ba.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_Input.4935a964.js": {
+    "file": "assets/Input.4935a964.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_HorizontalGroup.4e72606a.js": {
+    "file": "assets/HorizontalGroup.4e72606a.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Calendar.vue": {
+    "file": "assets/Calendar.8f4ccb0b.js",
+    "src": "resources/js/Pages/Calendar.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_helpers.713aa757.js",
+      "_useSettings.d274e027.js",
+      "_VerticallyScrollableContent.05c8ccf2.js",
+      "_PostsFilter.2a815ecf.js",
+      "_SearchInput.ba260651.js",
+      "_ProviderIcon.29b548ce.js",
+      "_Alert.a4238769.js",
+      "_DropdownItem.1205de72.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_useNotifications.3e5afb48.js",
+      "_Input.4935a964.js",
+      "_EllipsisVertical.5b33e03a.js",
+      "_Checkbox.b40bc676.js",
+      "_Facebook.541833ba.js"
+    ],
+    "assets": [
+      "assets/calendar-disabled-item.e7fcf298.svg"
+    ]
+  },
+  "_helpers.713aa757.js": {
+    "file": "assets/helpers.713aa757.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_useSettings.d274e027.js": {
+    "file": "assets/useSettings.d274e027.js",
+    "imports": [
+      "_helpers.713aa757.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_PostsFilter.2a815ecf.js": {
+    "file": "assets/PostsFilter.2a815ecf.js",
+    "imports": [
+      "resources/js/app.js",
+      "_useNotifications.3e5afb48.js",
+      "_Alert.a4238769.js",
+      "_VerticallyScrollableContent.05c8ccf2.js",
+      "_EllipsisVertical.5b33e03a.js",
+      "_DropdownItem.1205de72.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_ProviderIcon.29b548ce.js",
+      "_Checkbox.b40bc676.js",
+      "_SearchInput.ba260651.js"
+    ]
+  },
+  "_VerticallyScrollableContent.05c8ccf2.js": {
+    "file": "assets/VerticallyScrollableContent.05c8ccf2.js",
+    "imports": [
+      "resources/js/app.js",
+      "_SearchInput.ba260651.js",
+      "_ProviderIcon.29b548ce.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Alert.a4238769.js",
+      "_useNotifications.3e5afb48.js",
+      "_helpers.713aa757.js",
+      "_DropdownItem.1205de72.js",
+      "_Input.4935a964.js"
+    ],
+    "css": [
+      "assets/VerticallyScrollableContent.eda7d8b2.css"
+    ],
+    "assets": [
+      "assets/fb-like.59c2ede2.svg",
+      "assets/fb-wow.ca50712c.svg",
+      "assets/fb-icons.855a0fcf.png",
+      "assets/globe.4f41e2b3.svg",
+      "assets/reply.69e79af6.svg",
+      "assets/retweet.0437347b.svg",
+      "assets/star.abade377.svg",
+      "assets/bookmark.331e5819.svg",
+      "assets/ellipsis.065dffec.svg"
+    ]
+  },
+  "_SearchInput.ba260651.js": {
+    "file": "assets/SearchInput.ba260651.js",
+    "imports": [
+      "resources/js/app.js",
+      "_Input.4935a964.js"
+    ]
+  },
+  "resources/js/Pages/Dashboard.vue": {
+    "file": "assets/Dashboard.0a15028e.js",
+    "src": "resources/js/Pages/Dashboard.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_helpers.713aa757.js",
+      "_useNotifications.3e5afb48.js",
+      "_PageHeader.e50e517c.js",
+      "_Account.edb5e561.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Tab.812f605d.js",
+      "_ProviderIcon.29b548ce.js",
+      "_Facebook.541833ba.js",
+      "_ExclamationCircle.fc6baa24.js"
+    ]
+  },
+  "_Tab.812f605d.js": {
+    "file": "assets/Tab.812f605d.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Media.vue": {
+    "file": "assets/Media.d01cc32c.js",
+    "src": "resources/js/Pages/Media.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_SearchInput.ba260651.js",
+      "_MediaGifs.9c432631.js",
+      "_PageHeader.e50e517c.js",
+      "_Tab.812f605d.js",
+      "_PureDangerButton.747bf8d2.js",
+      "_Alert.a4238769.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Input.4935a964.js",
+      "_NoResult.81ea77da.js",
+      "_helpers.713aa757.js",
+      "_ExclamationCircle.fc6baa24.js",
+      "_useNotifications.3e5afb48.js"
+    ]
+  },
+  "_MediaGifs.9c432631.js": {
+    "file": "assets/MediaGifs.9c432631.js",
+    "imports": [
+      "resources/js/app.js",
+      "_NoResult.81ea77da.js",
+      "_SearchInput.ba260651.js",
+      "_Alert.a4238769.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_useNotifications.3e5afb48.js",
+      "_helpers.713aa757.js"
+    ]
+  },
+  "_PureDangerButton.747bf8d2.js": {
+    "file": "assets/PureDangerButton.747bf8d2.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_NoResult.81ea77da.js": {
+    "file": "assets/NoResult.81ea77da.js",
+    "imports": [
+      "_helpers.713aa757.js",
+      "_ExclamationCircle.fc6baa24.js",
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/Posts/CreateEdit.vue": {
+    "file": "assets/CreateEdit.3a276431.js",
+    "src": "resources/js/Pages/Posts/CreateEdit.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_helpers.713aa757.js",
+      "_SearchInput.ba260651.js",
+      "_useNotifications.3e5afb48.js",
+      "_PageHeader.e50e517c.js",
+      "_VerticallyScrollableContent.05c8ccf2.js",
+      "_DropdownItem.1205de72.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Account.edb5e561.js",
+      "_ProviderIcon.29b548ce.js",
+      "_Tab.812f605d.js",
+      "_Alert.a4238769.js",
+      "_MediaGifs.9c432631.js",
+      "_NoResult.81ea77da.js",
+      "_useSettings.d274e027.js",
+      "_ExclamationCircle.fc6baa24.js",
+      "_Input.4935a964.js",
+      "_Facebook.541833ba.js"
+    ],
+    "css": [
+      "assets/CreateEdit.7ff9f593.css"
+    ]
+  },
+  "resources/js/Pages/Posts/Index.vue": {
+    "file": "assets/Index.e3ed6fbb.js",
+    "src": "resources/js/Pages/Posts/Index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useNotifications.3e5afb48.js",
+      "_helpers.713aa757.js",
+      "_PageHeader.e50e517c.js",
+      "_PostsFilter.2a815ecf.js",
+      "_Tab.812f605d.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Checkbox.b40bc676.js",
+      "_PureDangerButton.747bf8d2.js",
+      "_Alert.a4238769.js",
+      "_SearchInput.ba260651.js",
+      "_NoResult.81ea77da.js",
+      "_VerticallyScrollableContent.05c8ccf2.js",
+      "_DropdownItem.1205de72.js",
+      "_Account.edb5e561.js",
+      "_EllipsisVertical.5b33e03a.js",
+      "_ProviderIcon.29b548ce.js",
+      "_Facebook.541833ba.js",
+      "_Input.4935a964.js",
+      "_ExclamationCircle.fc6baa24.js"
+    ]
+  },
+  "_Services.3d38fe85.js": {
+    "file": "assets/Services.3d38fe85.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_PageHeader.e50e517c.js",
+      "_Tab.812f605d.js",
+      "_Facebook.541833ba.js"
+    ],
+    "dynamicImports": [
+      "resources/js/Components/ServiceForm/TwitterServiceForm.vue",
+      "resources/js/Components/ServiceForm/FacebookServiceForm.vue",
+      "resources/js/Components/ServiceForm/UnsplashServiceForm.vue",
+      "resources/js/Components/ServiceForm/TenorServiceForm.vue"
+    ]
+  },
+  "resources/js/Pages/Settings.vue": {
+    "file": "assets/Settings.39ee406a.js",
+    "src": "resources/js/Pages/Settings.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useNotifications.3e5afb48.js",
+      "_PageHeader.e50e517c.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_HorizontalGroup.4e72606a.js"
+    ]
+  },
+  "resources/js/Components/ServiceForm/TwitterServiceForm.vue": {
+    "file": "assets/TwitterServiceForm.5a5d88ca.js",
+    "src": "resources/js/Components/ServiceForm/TwitterServiceForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useNotifications.3e5afb48.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Input.4935a964.js",
+      "_Facebook.541833ba.js",
+      "_HorizontalGroup.4e72606a.js",
+      "_ReadDocHelp.5ee2448a.js"
+    ]
+  },
+  "_ReadDocHelp.5ee2448a.js": {
+    "file": "assets/ReadDocHelp.5ee2448a.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Components/ServiceForm/FacebookServiceForm.vue": {
+    "file": "assets/FacebookServiceForm.b2ad6991.js",
+    "src": "resources/js/Components/ServiceForm/FacebookServiceForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useNotifications.3e5afb48.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Input.4935a964.js",
+      "_Facebook.541833ba.js",
+      "_HorizontalGroup.4e72606a.js",
+      "_ReadDocHelp.5ee2448a.js"
+    ]
+  },
+  "resources/js/Components/ServiceForm/UnsplashServiceForm.vue": {
+    "file": "assets/UnsplashServiceForm.e1ccb976.js",
+    "src": "resources/js/Components/ServiceForm/UnsplashServiceForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useNotifications.3e5afb48.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Input.4935a964.js",
+      "_Services.3d38fe85.js",
+      "_HorizontalGroup.4e72606a.js",
+      "_ReadDocHelp.5ee2448a.js",
+      "_PageHeader.e50e517c.js",
+      "_Tab.812f605d.js",
+      "_Facebook.541833ba.js"
+    ]
+  },
+  "resources/js/Components/ServiceForm/TenorServiceForm.vue": {
+    "file": "assets/TenorServiceForm.c05c1c18.js",
+    "src": "resources/js/Components/ServiceForm/TenorServiceForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_useNotifications.3e5afb48.js",
+      "_PrimaryButton.d6cf04cb.js",
+      "_Input.4935a964.js",
+      "_HorizontalGroup.4e72606a.js",
+      "_ReadDocHelp.5ee2448a.js"
+    ]
+  },
+  "DropdownItem.css": {
+    "file": "assets/DropdownItem.b54678c7.css",
+    "src": "DropdownItem.css"
+  },
+  "VerticallyScrollableContent.css": {
+    "file": "assets/VerticallyScrollableContent.eda7d8b2.css",
+    "src": "VerticallyScrollableContent.css"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app.2fb2114c.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/Pages/Posts/CreateEdit.css": {
+    "file": "assets/CreateEdit.7ff9f593.css",
+    "src": "resources/js/Pages/Posts/CreateEdit.css"
+  }
+}
