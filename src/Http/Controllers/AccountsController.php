@@ -19,7 +19,7 @@ class AccountsController extends Controller
     public function index(): Response
     {
         return Inertia::render('Accounts/Accounts', [
-            'accounts' => AccountResource::collection(Account::latest()->get())->resolve(),
+            'accounts' => AccountResource::collection(Account::query()->latest()->get())->resolve(),
             'has_service' => [
                 'twitter' => !! Services::get_data('twitter', 'client_id'),
                 'facebook' => !! Services::get_data('facebook', 'client_id')

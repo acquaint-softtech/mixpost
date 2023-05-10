@@ -24,7 +24,7 @@ class TwitterReports implements ProviderReports
 
     protected function metrics(Account $account, string $period): array
     {
-        $report = Metric::account($account->id)->select(
+        $report = Metric::query()->account($account->id)->select(
             DB::raw('SUM(JSON_EXTRACT(data, "$.likes")) as likes'),
             DB::raw('SUM(JSON_EXTRACT(data, "$.retweets")) as retweets'),
             DB::raw('SUM(JSON_EXTRACT(data, "$.impressions")) as impressions')
@@ -41,7 +41,7 @@ class TwitterReports implements ProviderReports
 
     protected function audience(Account $account, string $period): array
     {
-        $report = Audience::account($account->id)
+        $report = Audience::query()->account($account->id)
             ->select('date', DB::raw('SUM(total) as total'))
             ->groupBy('date')
             ->when($period, function (Builder $query) use ($period) {

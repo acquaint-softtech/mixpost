@@ -28,7 +28,7 @@ class ProcessTwitterMetricsJob implements ShouldQueue
 
     public function handle()
     {
-        $items = ImportedPost::select('created_at',
+        $items = ImportedPost::query()->select('created_at',
             DB::raw('SUM(JSON_EXTRACT(metrics, "$.likes")) as likes'),
             DB::raw('SUM(JSON_EXTRACT(metrics, "$.replies")) as replies'),
             DB::raw('SUM(JSON_EXTRACT(metrics, "$.retweets")) as retweets'),
@@ -50,6 +50,6 @@ class ProcessTwitterMetricsJob implements ShouldQueue
             ];
         });
 
-        Metric::upsert($data->toArray(), ['data'], ['account_id', 'date']);
+        Metric::query()->upsert($data->toArray(), ['data'], ['account_id', 'date']);
     }
 }

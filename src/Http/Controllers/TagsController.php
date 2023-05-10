@@ -26,7 +26,7 @@ class TagsController extends Controller
 
     public function destroy($id): RedirectResponse
     {
-        Tag::where('id', $id)->delete();
+        Tag::query()->where('id', $id)->delete();
 
         return redirect()->back();
     }

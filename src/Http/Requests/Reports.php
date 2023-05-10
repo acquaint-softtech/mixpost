@@ -23,7 +23,7 @@ class Reports extends FormRequest
 
     public function handle(): array
     {
-        $account = Account::find($this->get('account_id'));
+        $account = Account::query()->find($this->get('account_id'));
 
         $providerReports = match ($account->provider) {
             'twitter' => TwitterReports::class,

@@ -35,7 +35,7 @@ class ImportFacebookPageFollowersJob implements ShouldQueue
             return;
         }
 
-        Audience::updateOrCreate([
+        Audience::query()->updateOrCreate([
             'account_id' => $this->account->id,
             'date' => Carbon::now()->toDateString()
         ], [

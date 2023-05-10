@@ -63,7 +63,7 @@ class Services
         $defaultPayload = Arr::get($this->form(), $name, []);
 
         $value = $this->getFromCache($name, function () use ($name, $defaultPayload) {
-            $dbRecord = Service::where('name', $name)->first();
+            $dbRecord = Service::query()->where('name', $name)->first();
 
             try {
                 $payload = $dbRecord ? $dbRecord->credentials->toArray() : $defaultPayload;

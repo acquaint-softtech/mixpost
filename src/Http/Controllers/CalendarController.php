@@ -23,8 +23,8 @@ class CalendarController extends Controller
         $posts = PostQuery::apply($request)->get();
 
         return Inertia::render('Calendar', [
-            'accounts' => fn() => AccountResource::collection(Account::oldest()->get())->resolve(),
-            'tags' => fn() => TagResource::collection(Tag::latest()->get())->resolve(),
+            'accounts' => fn() => AccountResource::collection(Account::query()->oldest()->get())->resolve(),
+            'tags' => fn() => TagResource::collection(Tag::query()->latest()->get())->resolve(),
             'posts' => fn() => PostResource::collection($posts)->additional([
                 'filter' => [
                     'accounts' => Arr::map($request->get('accounts', []), 'intval')

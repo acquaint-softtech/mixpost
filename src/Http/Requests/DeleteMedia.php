@@ -17,7 +17,7 @@ class DeleteMedia extends FormRequest
     public function handle()
     {
         foreach ($this->input('items') as $id) {
-            $media = Media::find($id);
+            $media = Media::query()->find($id);
 
             if (!$media) {
                 continue;

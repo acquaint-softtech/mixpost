@@ -11,7 +11,7 @@ class MediaFetchUploadsController extends Controller
 {
     public function __invoke(): AnonymousResourceCollection
     {
-        $records = Media::latest('created_at')->simplePaginate(30);
+        $records = Media::query()->latest('created_at')->simplePaginate(30);
 
         return MediaResource::collection($records);
     }

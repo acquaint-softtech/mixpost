@@ -12,7 +12,7 @@ trait AccountsOption
     {
         $ids = Arr::wrap($this->option('accounts'));
 
-        return Account::when(count($ids), function (Builder $query) use ($ids) {
+        return Account::query()->when(count($ids), function (Builder $query) use ($ids) {
             $query->whereIn('id', $ids);
         })->get();
     }

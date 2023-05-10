@@ -75,7 +75,7 @@ class MediaUploader
 
     public function uploadAndInsert()
     {
-        return Media::create($this->upload());
+        return Media::query()->create($this->upload());
     }
 
     protected function performConversions(string $filepath): array

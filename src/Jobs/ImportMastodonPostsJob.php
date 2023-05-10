@@ -81,6 +81,6 @@ class ImportMastodonPostsJob implements ShouldQueue
             ];
         });
 
-        ImportedPost::upsert($data, ['account_id', 'provider_post_id'], ['content', 'metrics']);
+        ImportedPost::query()->upsert($data, ['account_id', 'provider_post_id'], ['content', 'metrics']);
     }
 }

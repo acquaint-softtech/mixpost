@@ -20,7 +20,7 @@ class SaveSettings extends FormRequest
         foreach ($schema as $name => $defaultPayload) {
             $payload = $this->input($name, $defaultPayload);
 
-            SettingModel::updateOrCreate(['name' => $name], ['payload' => $payload]);
+            SettingModel::query()->updateOrCreate(['name' => $name], ['payload' => $payload]);
 
             SettingsFacade::put($name, $payload);
         }

@@ -12,7 +12,7 @@ class UpdatePost extends PostFormRequest
 
     public function withValidator($validator)
     {
-        $this->post = Post::findOrFail($this->route('post'));
+        $this->post = Post::query()->findOrFail($this->route('post'));
 
         $validator->after(function ($validator) {
             if ($this->post->isInHistory()) {
